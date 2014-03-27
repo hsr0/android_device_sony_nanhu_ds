@@ -29,11 +29,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/sony/tamsui-common/prebuilt/resources-mdpi.mk)
 
 # Inherit from nanhu device
-$(call inherit-product, device/sony/nanhu/nanhu.mk)
+$(call inherit-product, device/sony/nanhu_ds/nanhu_ds.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_nanhu
-PRODUCT_DEVICE := nanhu
+PRODUCT_NAME := full_nanhu_ds
+PRODUCT_DEVICE := nanhu_ds
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia E
+PRODUCT_MODEL := Xperia E Dual

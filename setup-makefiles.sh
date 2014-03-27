@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VENDOR=sony
-DEVICE=nanhu
+DEVICE=nanhu_ds
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
