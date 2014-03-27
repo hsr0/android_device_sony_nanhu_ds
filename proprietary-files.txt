@@ -2,7 +2,6 @@ bin/cnd
 bin/ds_fmc_appd
 bin/gpu_dcvsd
 bin/hci_qcomm_init
-bin/hciattach
 bin/mm-qcamera-daemon
 bin/netmgrd
 bin/nvcustomizer
@@ -46,7 +45,6 @@ lib/liballjoyn.so
 lib/libaudioalsa.so
 lib/libaudioeq.so
 lib/libauth.so
-lib/libcamera_client.so
 lib/libchromatix_imx074_default_video.so
 lib/libchromatix_imx074_preview.so
 lib/libchromatix_imx074_video_hd.so
@@ -126,7 +124,6 @@ lib/libqueue.so
 lib/libril-qc-1.so
 lib/libril-qc-qmi-1.so
 lib/libril.so
-lib/libutils.so
 lib/libwms.so
 lib/libwmsts.so
 lib/libxml.so
