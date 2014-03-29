@@ -1,5 +1,7 @@
 bin/cnd
 bin/ds_fmc_appd
+bin/fmconfig
+bin/fm_qsoc_patche
 bin/gpu_dcvsd
 bin/hci_qcomm_init
 bin/mm-qcamera-daemon
