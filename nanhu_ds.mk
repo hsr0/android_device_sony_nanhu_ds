@@ -15,7 +15,7 @@
 #
 
 # Inherit the proprietary counterpart
-$(call inherit-product-if-exists, vendor/sony/nanhu_ds/nanhu-vendor.mk)
+$(call inherit-product-if-exists, vendor/sony/nanhu_ds/nanhu_ds-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/sony/nanhu_ds/overlay
 
