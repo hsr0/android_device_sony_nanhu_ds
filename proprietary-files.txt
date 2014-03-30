@@ -1,7 +1,7 @@
 bin/cnd
 bin/ds_fmc_appd
 bin/fmconfig
-bin/fm_qsoc_patche
+bin/fm_qsoc_patches
 bin/gpu_dcvsd
 bin/hci_qcomm_init
 bin/mm-qcamera-daemon
@@ -43,6 +43,7 @@ lib/libOmxVp8Dec.so
 lib/libOmxWmaDec.so
 lib/libOmxWmvDec.so
 lib/libOmxrv9Dec.so
+lib/libOpenVG.so
 lib/liballjoyn.so
 lib/libaudioalsa.so
 lib/libaudioeq.so
@@ -90,9 +91,11 @@ lib/libdsm.so
 lib/libdsutils.so
 lib/libgemini.so
 lib/libgps.utils.so
+lib/libgsl.so
 lib/libidl.so
 lib/libimage-jpeg-enc-omx-comp.so
 lib/libimage-omx-common.so
+lib/libjpeg.so
 lib/libloc_adapter.so
 lib/libloc_api-rpc-qc.so
 lib/libloc_eng.so
@@ -117,6 +120,8 @@ lib/liboem_rapi.so
 lib/liboemcamera.so
 lib/liboncrpc.so
 lib/libpbmlib.so
+lib/libqc-opt.so
+lib/libqcci_legacy.so
 lib/libqdi.so
 lib/libqdp.so
 lib/libqmi.so
@@ -126,6 +131,8 @@ lib/libqueue.so
 lib/libril-qc-1.so
 lib/libril-qc-qmi-1.so
 lib/libril.so
+lib/libsc-a2xx.so
+lib/libutils.so
 lib/libwms.so
 lib/libwmsts.so
 lib/libxml.so
