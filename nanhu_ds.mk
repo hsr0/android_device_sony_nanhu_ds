@@ -25,9 +25,9 @@ $(call inherit-product, device/sony/tamsui-common/tamsui.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-PRODUCT_PACKAGES += \
-    FM \
-    init.qcom.fm.sh
+#PRODUCT_PACKAGES += \
+#    FM \
+#    init.qcom.fm.sh
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
