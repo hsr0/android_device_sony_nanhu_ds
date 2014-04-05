@@ -59,7 +59,8 @@ PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/init.bluetooth.sh:system/etc/init.bluetooth.sh
 
 PRODUCT_PACKAGES += \
-    hciattach
+    hciattach \
+    telephony-msim
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
