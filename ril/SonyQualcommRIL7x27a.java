@@ -221,7 +221,7 @@ public class SonyQualcommRIL7x27a extends RIL implements CommandsInterface {
                     strings[i+0],
                     strings[i+1],
                     strings[i+2],
-                    strings[i+3] + "+" +
+                    strings[i+3],
                     strings[i+4]));
         }
         return ret;
