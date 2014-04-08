@@ -59,8 +59,7 @@ PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/init.bluetooth.sh:system/etc/init.bluetooth.sh
 
 PRODUCT_PACKAGES += \
-    hciattach \
-    telephony-msim
+    hciattach
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
@@ -97,6 +96,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.webview.gralloc_unbind=1 \
     ro.fm.analogpath.supported=true \
     ro.fm.mulinst.recording.support=false \
-    persist.multisim.config=dsds
+    persist.radio.multisim.config=dsds
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
