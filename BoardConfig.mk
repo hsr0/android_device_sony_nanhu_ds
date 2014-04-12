@@ -50,10 +50,6 @@ BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p17
 # Custom vibrator
 BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/sony/nanhu_ds/vibrator/vibrator.c
 
-# RIL
-BOARD_USES_LEGACY_RIL := false
-BOARD_RIL_CLASS := 
-
 TARGET_OTA_ASSERT_DEVICE := C1504,C1505,C1604,C1605,nanhu,nanhu_ds
 
 #Low Ram Device
