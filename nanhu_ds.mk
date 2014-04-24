@@ -45,6 +45,18 @@ PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/init.recovery.device.rc:root/init.recovery.device.rc \
     device/sony/nanhu_ds/../tamsui-common/prebuilt/logo_M.rle:root/logo.rle
 
+# RAMdisk Config
+PRODUCT_COPY_FILES += \
+    device/sony/nanhu_ds/root/init.target.rc:root/init.target.rc \
+    device/sony/nanhu_ds/root/system/etc/init.qcom.thermald_conf.sh:root/system/etc/init.qcom.thermald_conf.sh \
+    device/sony/nanhu_ds/root/system/etc/thermal-8x25-sku7.conf:root/system/etc/thermal-8x25-sku7.conf \
+    device/sony/nanhu_ds/root/system/etc/thermal-8x25-evb.conf:root/system/etc/thermal-8x25-evb.conf \
+    device/sony/nanhu_ds/root/init.qcom.ril.path.sh:root/init.qcom.ril.path.sh \
+    device/sony/nanhu_ds/root/system/etc/init.qcom.composition_type.sh:root/system/etc/init.qcom.composition_type.sh \
+    device/sony/nanhu_ds/root/system/etc/init.target.8x25.sh:root/system/etc/init.target.8x25.sh \
+    device/sony/nanhu_ds/root/system/etc/init.qcom.efs.sync.sh:root/system/etc/init.qcom.efs.sync.sh \
+    device/sony/nanhu_ds/root/system/etc/iqosmgr_rules.xml:root/system/etc/qosmgr_rules.xml \
+
 # USB function switching
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/init.sony.usb.rc:root/init.sony.usb.rc
@@ -96,6 +108,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.webview.gralloc_unbind=1 \
     ro.fm.analogpath.supported=true \
     ro.fm.mulinst.recording.support=false \
-    persist.radio.multisim.config=dsds
+    persist.radio.multisim.config=dsds \
+    persist.multisim.config=dsds \
+    debug.composition.7x27A.type=mdp \
+    debug.composition.7x25A.type=mdp \
+    debug.composition.8x25.type=dyn 
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
