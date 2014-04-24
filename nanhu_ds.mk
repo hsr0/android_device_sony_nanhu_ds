@@ -55,7 +55,7 @@ PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/root/system/etc/init.qcom.composition_type.sh:root/system/etc/init.qcom.composition_type.sh \
     device/sony/nanhu_ds/root/system/etc/init.target.8x25.sh:root/system/etc/init.target.8x25.sh \
     device/sony/nanhu_ds/root/system/etc/init.qcom.efs.sync.sh:root/system/etc/init.qcom.efs.sync.sh \
-    device/sony/nanhu_ds/root/system/etc/iqosmgr_rules.xml:root/system/etc/qosmgr_rules.xml \
+    device/sony/nanhu_ds/root/system/etc/qosmgr_rules.xml:root/system/etc/qosmgr_rules.xml \
 
 # USB function switching
 PRODUCT_COPY_FILES += \
