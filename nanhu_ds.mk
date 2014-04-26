@@ -104,12 +104,11 @@ PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/cy8ctma340_touch.kl:system/usr/keylayout/cy8ctma340_touch.kl
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril.v3=skipnullaid,qcomdsds \
+    ro.telephony.ril.v3=qcomdsds,skipnullaid \
     ro.webview.gralloc_unbind=1 \
-    ro.fm.analogpath.supported=true \
-    ro.fm.mulinst.recording.support=false \
     persist.radio.multisim.config=dsds \
     persist.multisim.config=dsds \
+    persist.radio.apm_sim_not_pwdn=0 \
     debug.composition.7x27A.type=mdp \
     debug.composition.7x25A.type=mdp \
     debug.composition.8x25.type=dyn 
