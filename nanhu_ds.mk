@@ -111,6 +111,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=0 \
     debug.composition.7x27A.type=mdp \
     debug.composition.7x25A.type=mdp \
-    debug.composition.8x25.type=dyn 
+    debug.composition.8x25.type=dyn \
+    persist.sys.usb.config=mtp,adb
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
