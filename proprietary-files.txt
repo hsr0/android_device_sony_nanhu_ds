@@ -2,6 +2,7 @@ bin/cnd
 bin/ds_fmc_appd
 bin/gpu_dcvsd
 bin/hci_qcomm_init
+bin/magnetic
 bin/mm-qcamera-daemon
 bin/mpdecision
 bin/netmgrd
