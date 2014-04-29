@@ -114,4 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.8x25.type=dyn \
     persist.sys.usb.config=mtp,adb
 
+PRODUCT_PACKAGES += \
+    light_nanhu.msm7x27a
+
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
