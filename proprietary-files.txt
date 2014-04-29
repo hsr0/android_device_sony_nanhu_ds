@@ -126,6 +126,7 @@ lib/libqmi.so
 lib/libqmi_client_qmux.so
 lib/libqmiservices.so
 lib/libqueue.so
+lib/libreference-ril.so
 lib/libril-qc-1.so
 lib/libril-qc-qmi-1.so
 lib/libril.so
