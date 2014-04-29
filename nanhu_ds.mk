@@ -48,14 +48,18 @@ PRODUCT_COPY_FILES += \
 # RAMdisk Config
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/root/init.target.rc:root/init.target.rc \
-    device/sony/nanhu_ds/root/system/etc/init.qcom.thermald_conf.sh:root/system/etc/init.qcom.thermald_conf.sh \
-    device/sony/nanhu_ds/root/system/etc/thermal-8x25-sku7.conf:root/system/etc/thermal-8x25-sku7.conf \
-    device/sony/nanhu_ds/root/system/etc/thermal-8x25-evb.conf:root/system/etc/thermal-8x25-evb.conf \
     device/sony/nanhu_ds/root/init.qcom.ril.path.sh:root/init.qcom.ril.path.sh \
-    device/sony/nanhu_ds/root/system/etc/init.qcom.composition_type.sh:root/system/etc/init.qcom.composition_type.sh \
-    device/sony/nanhu_ds/root/system/etc/init.target.8x25.sh:root/system/etc/init.target.8x25.sh \
-    device/sony/nanhu_ds/root/system/etc/init.qcom.efs.sync.sh:root/system/etc/init.qcom.efs.sync.sh \
-    device/sony/nanhu_ds/root/system/etc/qosmgr_rules.xml:root/system/etc/qosmgr_rules.xml \
+    device/sony/nanhu_ds/root/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
+    device/sony/nanhu_ds/root/iinit.qcom.class_main.sh:root/init.qcom.class_main.sh
+    
+PRODUCT_COPY_FILES += \
+    device/sony/nanhu_ds/root/system/etc/init.qcom.thermald_conf.sh:system/etc/init.qcom.thermald_conf.sh \
+    device/sony/nanhu_ds/root/system/etc/thermal-8x25-sku7.conf:system/etc/thermal-8x25-sku7.conf \
+    device/sony/nanhu_ds/root/system/etc/thermal-8x25-evb.conf:system/etc/thermal-8x25-evb.conf \
+    device/sony/nanhu_ds/root/system/etc/init.qcom.composition_type.sh:system/etc/init.qcom.composition_type.sh \
+    device/sony/nanhu_ds/root/system/etc/init.target.8x25.sh:system/etc/init.target.8x25.sh \
+    device/sony/nanhu_ds/root/system/etc/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
+    device/sony/nanhu_ds/root/system/etc/qosmgr_rules.xml:system/etc/qosmgr_rules.xml \
 
 # USB function switching
 PRODUCT_COPY_FILES += \
