@@ -34,6 +34,6 @@ $(call inherit-product, device/sony/nanhu_ds/nanhu_ds.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_nanhu_ds
 PRODUCT_DEVICE := nanhu_ds
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia E Dual
+PRODUCT_BRAND := sony
+PRODUCT_MANUFACTURER := sony
+PRODUCT_MODEL := xperia e dual
