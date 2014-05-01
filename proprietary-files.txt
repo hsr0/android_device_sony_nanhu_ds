@@ -2,6 +2,7 @@ bin/cnd
 bin/ds_fmc_appd
 bin/gpu_dcvsd
 bin/hci_qcomm_init
+bin/hciattach
 bin/magnetic
 bin/mm-qcamera-daemon
 bin/mpdecision
@@ -133,6 +134,7 @@ lib/libreference-ril.so
 lib/libril-qc-1.so
 lib/libril-qc-qmi-1.so
 lib/libril.so
+lib/libutils.so
 lib/libwms.so
 lib/libwmsts.so
 lib/libxml.so
