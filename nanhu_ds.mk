@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/root/init.target.rc:root/init.target.rc \
     device/sony/nanhu_ds/root/init.qcom.ril.path.sh:root/init.qcom.ril.path.sh \
     device/sony/nanhu_ds/root/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-    device/sony/nanhu_ds/root/iinit.qcom.class_main.sh:root/init.qcom.class_main.sh
+    device/sony/nanhu_ds/root/init.qcom.class_main.sh:root/init.qcom.class_main.sh
     
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/root/system/etc/init.qcom.thermald_conf.sh:system/etc/init.qcom.thermald_conf.sh \
