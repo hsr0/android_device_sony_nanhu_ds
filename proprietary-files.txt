@@ -9,11 +9,13 @@ bin/mpdecision
 bin/netmgrd
 bin/nvcustomizer
 bin/qmuxd
+bin/qmiproxy
 bin/qosmgr
 bin/rild
 bin/thermald
 bin/updatemiscta
 bin/wiperiface
+bin/wpa_supplicant
 etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin
 etc/firmware/ath6k/AR6003/hw2.1.1/fw-4.bin
 etc/firmware/ath6k/AR6003/hw2.1.1/softmac
