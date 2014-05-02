@@ -56,21 +56,9 @@ service version-set /system/bin/sh /system/etc/init.target.8x25.sh
     disabled
     oneshot
 
-service wlan_tool /system/bin/wlan_tool
-    class late_start
-    user root
-    group wifi system net_admin inet shell
-    oneshot
-
 on boot
    start qcamerasvr
    start gpu_dcvsd
-
-#start camera server as daemon
-service qcamerasvr /system/bin/mm-qcamera-daemon
-        class late_start
-        user camera
-        group camera system inet audio
 
 service thermald /system/bin/thermald
    class late_start
@@ -87,11 +75,6 @@ on property:sys.radio.shutdown=true
    exec /system/bin/sh /system/etc/init.qcom.efs.sync.sh
    user root
    group root
-
-service gpu_dcvsd /system/bin/gpu_dcvsd
-    class late_start
-    user root
-    oneshot
 
 service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
     user system

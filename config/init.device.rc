@@ -142,11 +142,6 @@ service qcom-c_main-sh /system/bin/sh /init.qcom.class_main.sh
 on property:vold.decrypt=trigger_restart_framework
     start qcom-c_main-sh
 
-service rmt_storage /sbin/rmt_storage
-    class core
-    user root
-    disabled
-
 on property:ro.boot.emmc=true
     start rmt_storage
     # SEMC NV customizer
@@ -327,7 +322,6 @@ service atfwd /system/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
-    onrestart /system/bin/log -t RIL-ATFWD -p w "ATFWD daemon restarted"
 
 service hdmid /system/bin/hdmid
     class late_start
@@ -398,28 +392,11 @@ service profiler_daemon /system/bin/profiler_daemon
     group root
     disabled
 
-service sdcard /system/bin/sdcard /data/media 1023 1023
-    class late_start
-    disabled
-
-on property:ro.fuse_sdcard=true
-    start sdcard
-
-# This will make sure that sdcard service starts as late_start.
-on nonencrypted
-    setprop ro.fuse_sdcard ${persist.fuse_sdcard}
-
-on property:vold.decrypt=trigger_restart_framework
-    setprop ro.fuse_sdcard ${persist.fuse_sdcard}
-
 service hcidump /system/bin/sh /system/etc/hcidump.sh
     user bluetooth
     group bluetooth system net_bt_admin net_admin
     disabled
     oneshot
-
-service charger /charger
-    class charger
 
 # Restart adbd so it can run as root
 on property:service.adb.root=1
