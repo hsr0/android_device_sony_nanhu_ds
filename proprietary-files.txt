@@ -54,7 +54,6 @@ lib/liballjoyn.so
 lib/libaudioalsa.so
 lib/libaudioeq.so
 lib/libauth.so
-lib/libcamera_client.so
 lib/libchromatix_imx074_default_video.so
 lib/libchromatix_imx074_preview.so
 lib/libchromatix_imx074_video_hd.so
