@@ -16,6 +16,17 @@ on post-fs-data
     chown system system /sys/class/leds/lm3533-light-button/brightness
     chmod 0660 /sys/class/leds/lm3533-light-button/brightness
 
+#Compass Fix
+    # Magnetic device
+    chown system system /sys/class/compass/magnetic/enable_acc
+    chown system system /sys/class/compass/magnetic/enable_mag
+    chown system system /sys/class/compass/magnetic/enable_ori
+    chown system system /sys/class/compass/magnetic/delay_acc
+    chown system system /sys/class/compass/magnetic/delay_mag
+    chown system system /sys/class/compass/magnetic/delay_ori
+    chown system system /sys/class/compass/magnetic/accel
+    chown system system /sys/class/compass/magnetic/get_device_infor 
+
     insmod /system/lib/modules/cfg80211.ko
     insmod /system/lib/modules/compat.ko
     insmod /system/lib/modules/bluetooth.ko
@@ -55,17 +66,6 @@ service dhcpcd_bnep /system/bin/dhcpcd -BKLG
     class late_start
     disabled
     oneshot
-
-#Compass Fix
-    # Magnetic device
-    chown system system /sys/class/compass/magnetic/enable_acc
-    chown system system /sys/class/compass/magnetic/enable_mag
-    chown system system /sys/class/compass/magnetic/enable_ori
-    chown system system /sys/class/compass/magnetic/delay_acc
-    chown system system /sys/class/compass/magnetic/delay_mag
-    chown system system /sys/class/compass/magnetic/delay_ori
-    chown system system /sys/class/compass/magnetic/accel
-    chown system system /sys/class/compass/magnetic/get_device_infor 
 
 # Magnetic service
 service akmd /system/bin/magnetic -m 2
