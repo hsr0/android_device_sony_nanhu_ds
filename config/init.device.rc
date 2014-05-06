@@ -73,29 +73,6 @@ service akmd /system/bin/magnetic -m 2
     user compass
     group system
 
-on boot
-    setprop wifi.interface wlan0
-	#Fix hotspot init error after Fota,FelexChing, 20130325
-    setprop wlan.driver.ath 1
-
-    setprop ro.telephony.call_ring.multiple false
-
-    #Set SUID bit for usbhub
-    #chmod 4755 /system/bin/usbhub
-    chmod 755 /system/bin/usbhub_init
-
-    #BT DUN port-bridge
-#    chmod 0660 /dev/smd7
-#    chown bluetooth bluetooth /dev/smd7
-
-    # To prevent out of order acknowledgements from making
-    # connection tracking to treat them as not belonging to
-    # the connection they belong to.
-    # Otherwise, a weird issue happens in which some long
-    # connections on high-throughput links get dropped when
-    # an ack packet comes out of order
-    write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
-
 # import cne init file
 on post-fs
     export_rc /persist/init.cne.rc
@@ -120,9 +97,6 @@ service usbhub_init /system/bin/usbhub_init
 on property:init.svc.surfaceflinger=stopped
     stop ppd
     stop hdmid
-
-on property:ro.board.platform=msm7630_fusion
-    start usbhub_init
 
 
 on property:bluetooth.isEnabled=true
@@ -193,10 +167,6 @@ service qmuxd /system/bin/qmuxd
     group radio audio bluetooth gps qcom_diag
     disabled
 
-service netmgrd /system/bin/netmgrd
-    class main
-    disabled
-
 service sensors /system/bin/sensors.qcom
     class late_start
     user root
@@ -250,18 +220,6 @@ service location_mq /system/bin/location-mq
     class late_start
     user gps
     group gps
-    disabled
-
-service xtwifi_inet /system/bin/xtwifi-inet-agent
-    class late_start
-    user gps
-    group inet gps
-    disabled
-
-service xtwifi_client /system/bin/xtwifi-client
-    class late_start
-    user gps
-    group net_admin wifi inet gps
     disabled
 
 service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
@@ -393,7 +351,6 @@ service profiler_daemon /system/bin/profiler_daemon
     disabled
 
 service hcidump /system/bin/sh /system/etc/hcidump.sh
-    user bluetooth
     group bluetooth system net_bt_admin net_admin
     disabled
     oneshot
