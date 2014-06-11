@@ -30,6 +30,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/nanhu_ds/custombootimg.mk
 
+# Nanhu Hack
+COMMON_GLOBAL_CFLAGS += DEVICE_NANHU
+
 #BOARD_HAVE_QCOM_FM := true
 #COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED -DWITH_QCOM_FM
 
@@ -50,6 +53,9 @@ BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p17
 # Custom vibrator
 BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/sony/nanhu_ds/vibrator/vibrator.c
 
+# RIL
+BOARD_USES_LEGACY_RIL := true
+
 TARGET_OTA_ASSERT_DEVICE := C1504,C1505,C1604,C1605,nanhu,nanhu_ds
 
 #Low Ram Device
@@ -58,38 +64,12 @@ TARGET_OTA_ASSERT_DEVICE := C1504,C1505,C1604,C1605,nanhu,nanhu_ds
 KERNEL_BT_MODULES :=
 	make -C kernel/backports ARCH=arm CROSS_COMPILE="arm-eabi-" KLIB=../../$(KERNEL_OUT) KLIB_BUILD=../../$(KERNEL_OUT) defconfig-nanhu-bt \
 	make -C kernel/backports ARCH=arm CROSS_COMPILE="arm-eabi-" KLIB=../../$(KERNEL_OUT) KLIB_BUILD=../../$(KERNEL_OUT) \
-	mv kernel/backports/compat/compat.ko $(KERNEL_MODULES_OUT) \
-	mv kernel/backports/net/bluetooth/bluetooth.ko \ $(KERNEL_MODULES_OUT) \
-	mv kernel/backports/net/bluetooth/rfcomm/rfcomm.ko $(KERNEL_MODULES_OUT) \
-	mv kernel/backports/net/bluetooth/bnep/bnep.ko $(KERNEL_MODULES_OUT) \
-	mv kernel/backports/net/bluetooth/hidp/hidp.ko $(KERNEL_MODULES_OUT) \
-	mv kernel/backports/drivers/bluetooth/bluetooth-power.ko $(KERNEL_MODULES_OUT) \
-	mv kernel/backports/drivers/bluetooth/hci_uart.ko $(KERNEL_MODULES_OUT)
+	mv kernel/backports/compat/compat.ko $(KERNEL_MODULES_OUT)
 
 TARGET_KERNEL_MODULES := KERNEL_BT_MODULES
-BOARD_HAVE_BLUETOOTH_BCM := 
-#BOARD_HAVE_BLUETOOTH_QCOM := true
-TARGET_NO_HW_VSYNC := 
+BOARD_HAVE_BLUETOOTH := true
 
-DEVICE_RESOLUTION := 320x480
-TW_INTERNAL_STORAGE_PATH := "/sdcard"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_NO_REBOOT_BOOTLOADER := true
-TW_DEFAULT_EXTERNAL_STORAGE := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TW_HAS_NO_RECOVERY_PARTITION := true
-TW_INCLUDE_JB_CRYPTO := true
-TW_CRYPTO_FS_TYPE := "ext4"
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p16"
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "noatime,nosuid,nodev,noauto_da_alloc,errors=panic"
-TW_CRYPTO_FS_FLAGS := "0x00000406"
-TW_CRYPTO_KEY_LOC := "footer"
-TW_EXCLUDE_SUPERSU := true
-TW_NO_SCREEN_TIMEOUT := true
-TW_NO_SCREEN_BLANK := true
-TW_NO_EXFAT := true
-TW_NO_EXFAT_FUSE := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lm3533-light-backlight/brightness
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/nanhu_ds/bluedroid
+
+TARGET_NO_HW_VSYNC :=

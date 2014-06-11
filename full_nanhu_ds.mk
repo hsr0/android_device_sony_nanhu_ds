@@ -25,8 +25,6 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Charging animation resources
-$(call inherit-product, device/sony/tamsui-common/prebuilt/resources-mdpi.mk)
 
 # Inherit from nanhu device
 $(call inherit-product, device/sony/nanhu_ds/nanhu_ds.mk)
