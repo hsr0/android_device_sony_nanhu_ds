@@ -11,13 +11,11 @@ bin/mpdecision
 bin/netmgrd
 bin/nvcustomizer
 bin/qmuxd
-bin/port-bridge
 bin/qmiproxy
 bin/qosmgr
 bin/rild
 bin/thermald
 bin/updatemiscta
-bin/v4l2-qcamera-app
 bin/wiperiface
 etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin
 etc/firmware/ath6k/AR6003/hw2.1.1/fw-4.bin
@@ -96,12 +94,9 @@ lib/libdiag.so
 lib/libdivxdrmdecrypt.so
 lib/libdsi_netctrl.so
 lib/libdsm.so
-lib/libdss.so
 lib/libdsutils.so
 lib/libgemini.so
 lib/libgps.utils.so
-lib/libgsdi_exp.so
-lib/libgstk_exp.so
 lib/libidl.so
 lib/libimage-jpeg-enc-omx-comp.so
 lib/libimage-omx-common.so
@@ -120,7 +115,6 @@ lib/libmmcamera_image_stab.so
 lib/libmmcamera_interface2.so
 lib/libmmcamera_statsproc31.so
 lib/libmmcamera_wavelet_lib.so
-lib/libmmgsdilib.so
 lib/libmmipl.so
 lib/libmmjpeg.so
 lib/libmmstillomx.so
@@ -138,12 +132,11 @@ lib/libqmi.so
 lib/libqmi_client_qmux.so
 lib/libqmiservices.so
 lib/libqueue.so
+lib/libreference-ril.so
 lib/libril-qc-1.so
 lib/libril-qc-qmi-1.so
 lib/libril.so
-lib/libuim.so
 lib/libwms.so
-lib/libwmsts.so
 lib/libwmsts.so
 lib/libxml.so
 
