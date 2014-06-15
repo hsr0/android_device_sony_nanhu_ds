@@ -27,15 +27,6 @@ on post-fs-data
     chown system system /sys/class/compass/magnetic/accel
     chown system system /sys/class/compass/magnetic/get_device_infor 
 
-    insmod /system/lib/modules/cfg80211.ko
-    insmod /system/lib/modules/compat.ko
-    insmod /system/lib/modules/bluetooth.ko
-    insmod /system/lib/modules/bluetooth-power.ko
-    insmod /system/lib/modules/hci_uart.ko
-    insmod /system/lib/modules/bnep.ko
-    insmod /system/lib/modules/hidp.ko
-    insmod /system/lib/modules/rfcomm.ko
-
 on early-charger
     wait /dev/block/mmcblk0p2
     start tad
@@ -124,13 +115,6 @@ service qmiproxy /system/bin/qmiproxy
     class main
     user radio
     group radio qcom_diag
-    disabled
-
-# QMUX must be in multiple groups to support external process connections
-service qmuxd /system/bin/qmuxd
-    class main
-    user radio
-    group radio audio bluetooth gps qcom_diag
     disabled
 
 on property:crypto.driver.load=1

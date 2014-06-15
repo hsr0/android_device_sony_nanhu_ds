@@ -7,7 +7,7 @@
 TARGET_SPECIFIC_HEADER_PATH += device/sony/nanhu_ds/include
 
 # TARGET_KERNEL_SOURCE := kernel/sony/nanhu_ds
-TARGET_KERNEL_CONFIG := cm_nanhu_ds_defconfig
+TARGET_KERNEL_CONFIG := cm_tamsui_nan_ds_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/nanhu_ds/rootdir/cmdline.txt
 
 # Partition information
@@ -49,11 +49,5 @@ PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/nanhu_ds/bluedroid
 
-KERNEL_BT_MODULES :=
-	make -C kernel/backports ARCH=arm CROSS_COMPILE="arm-eabi-" KLIB=../../$(KERNEL_OUT) KLIB_BUILD=../../$(KERNEL_OUT) defconfig-nanhu-bt \
-	make -C kernel/backports ARCH=arm CROSS_COMPILE="arm-eabi-" KLIB=../../$(KERNEL_OUT) KLIB_BUILD=../../$(KERNEL_OUT) \
-	mv kernel/backports/compat/compat.ko $(KERNEL_MODULES_OUT)
-
-TARGET_KERNEL_MODULES := KERNEL_BT_MODULES
 BOARD_HAVE_BLUETOOTH_BCM := 
 TARGET_NO_HW_VSYNC :=
